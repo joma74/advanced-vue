@@ -1,0 +1,25 @@
+{
+  "name": "advanced-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "poi build",
+    "start": "npm run build && serve ./dist",
+    "dev": "poi",
+    "deploy": "npm run build && now ./dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^0.3.0",
+    "vue": "^2.5.9",
+    "vue-class-component": "^6.1.1"
+  },
+  "devDependencies": {
+    "poi": "^9.5.11",
+    "serve": "^6.4.1"
+  }
+}
