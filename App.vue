@@ -1,7 +1,11 @@
 <template>
-  <h1 @click="onClick">
-    {{message}}
-  </h1>
+  <div>
+    <slot name="header"></slot>
+    <h1 @click="onClick">
+      {{message}}
+    </h1>
+    <slot name="footer"></slot>
+  </div>
 </template>
 
 <script>
