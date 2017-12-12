@@ -16,7 +16,8 @@
   "dependencies": {
     "tailwindcss": "^0.3.0",
     "vue": "^2.5.9",
-    "vue-class-component": "^6.1.1"
+    "vue-class-component": "^6.1.1",
+    "vue-property-decorator": "^6.0.0"
   },
   "devDependencies": {
     "poi": "^9.5.11",
