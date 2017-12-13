@@ -1,15 +1,15 @@
 <template>
   <Settings>
     <Layout slot-scope="{header, footer}">
-      <Header slot="header" :header="header"></Header>
-      <Content slot="content" :limit="4">
+      <AwesomeHeader slot="header" :header="header"></AwesomeHeader>
+      <AwesomeContent slot="content" :limit="4">
         <div><img src="https://robohash.org/mindy?set=set4" alt=""></div>
         <div><img src="https://robohash.org/john?set=set4" alt=""></div>
         <div><img src="https://robohash.org/kim?set=set4" alt=""></div>
         <div><img src="https://robohash.org/joel?set=set4" alt=""></div>
         <div><img src="https://robohash.org/maggie?set=set4" alt=""></div>
-      </Content>
-      <Footer slot="footer" :footer="footer"></Footer>
+      </AwesomeContent>
+      <AwesomeFooter slot="footer" :footer="footer"></AwesomeFooter>
     </Layout>
   </Settings>
 </template>
@@ -25,9 +25,9 @@ import { Header, Footer, Content } from "./components"
   components: {
     Settings,
     Layout,
-    Header,
-    Footer,
-    Content
+    AwesomeHeader: Header,
+    AwesomeFooter: Footer,
+    AwesomeContent: Content
   }
 })
 export default class App extends Vue {
