@@ -13,21 +13,7 @@ import Vue from "vue"
 import { Component, Prop } from "vue-property-decorator"
 import Settings from "./Settings"
 import Layout from "./Layout"
-import { Header, Footer } from "./components"
-
-const Cats = {
-  functional: true,
-  render: (h, { props }) => (
-    <div>
-      {props.names
-        .map(
-          name =>
-            `https://robohash.org/${name}?set=set${props.num}`
-        )
-        .map(url => <img src={url} alt="" />)}
-    </div>
-  )
-}
+import { Header, Footer, Cats } from "./components"
 
 @Component({
   components: {
