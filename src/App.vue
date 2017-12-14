@@ -2,13 +2,7 @@
   <Settings>
     <Layout slot-scope="{header, footer}">
       <AwesomeHeader slot="header" :header="header"></AwesomeHeader>
-      <AwesomeContent slot="content" :limit="4">
-        <div><img src="https://robohash.org/mindy?set=set4" alt=""></div>
-        <div><img src="https://robohash.org/john?set=set4" alt=""></div>
-        <div><img src="https://robohash.org/kim?set=set4" alt=""></div>
-        <div><img src="https://robohash.org/joel?set=set4" alt=""></div>
-        <div><img src="https://robohash.org/maggie?set=set4" alt=""></div>
-      </AwesomeContent>
+      <Cats slot="content" :names="names" :num="4"></Cats>
       <AwesomeFooter slot="footer" :footer="footer"></AwesomeFooter>
     </Layout>
   </Settings>
@@ -19,7 +13,21 @@ import Vue from "vue"
 import { Component, Prop } from "vue-property-decorator"
 import Settings from "./Settings"
 import Layout from "./Layout"
-import { Header, Footer, Content } from "./components"
+import { Header, Footer } from "./components"
+
+const Cats = {
+  functional: true,
+  render: (h, { props }) => (
+    <div>
+      {props.names
+        .map(
+          name =>
+            `https://robohash.org/${name}?set=set${props.num}`
+        )
+        .map(url => <img src={url} alt="" />)}
+    </div>
+  )
+}
 
 @Component({
   components: {
@@ -27,15 +35,10 @@ import { Header, Footer, Content } from "./components"
     Layout,
     AwesomeHeader: Header,
     AwesomeFooter: Footer,
-    AwesomeContent: Content
+    Cats
   }
 })
 export default class App extends Vue {
-  @Prop({ default: "Hello from Prop decorator" })
-  message
-
-  onClick() {
-    this.message = "Goodbye"
-  }
+  names = ["mindy", "john", "kim", "joel", "ben"]
 }
 </script>
