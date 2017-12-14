@@ -33,7 +33,14 @@ const Two = {
 }
 
 const AsyncThree = () => ({
-  component: import("./components/Three")
+  component: import("./components/Three"),
+  loading: {
+    render: h => <h1>Loading... 👀</h1>
+  },
+  timeout: 3000,
+  error: {
+    render: h => <h1 class="text-red">ERROR!!! 😭</h1>
+  }
 })
 
 @Component({
