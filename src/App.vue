@@ -32,11 +32,9 @@ const Two = {
   render: h => <h1 class="bg-green">Two</h1>
 }
 
-const Three = {
-  functional: true,
-  name: "Three",
-  render: h => <h1 class="bg-purple">Three</h1>
-}
+const AsyncThree = () => ({
+  component: import("./components/Three")
+})
 
 @Component({
   components: {
@@ -47,7 +45,7 @@ const Three = {
   }
 })
 export default class App extends Vue {
-  comps = [One, Two, Three]
+  comps = [One, Two, AsyncThree]
   selectedComp = this.comps[0]
 }
 </script>
