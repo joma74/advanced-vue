@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+	"experimentalDecorators": true,
+	"jsx": "preserve",
+	"lib": [
+		"es2015"
+	],
+	"module": "commonjs"
+  }
+}

@@ -6,22 +6,24 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "poi build",
-    "start": "npm run build && serve ./dist",
+    "start": "yarn run build && serve ./dist",
     "dev": "poi",
-    "deploy": "npm run build && now ./dist"
+    "deploy": "yarn run build && now ./dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.4",
-    "tailwindcss": "^0.3.0",
-    "vue": "^2.5.9",
-    "vue-class-component": "^6.1.1",
-    "vue-property-decorator": "^6.0.0"
+    "tailwindcss": "^0",
+    "vue": "^2",
+    "vue-class-component": "^6",
+    "vue-property-decorator": "^7"
   },
   "devDependencies": {
+    "babel-preset-vue-app": "^2.0.0",
     "poi": "^9.5.11",
-    "serve": "^6.4.1"
+    "serve": "^6.4.1",
+    "typescript": "^3.2.0-dev.20181004"
   }
 }
