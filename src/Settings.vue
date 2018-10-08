@@ -4,12 +4,12 @@
   </div>
 </template>
 <script>
-import Vue from "vue"
-import Component from "vue-class-component"
+import Vue from "vue";
+import Component from "vue-class-component";
 
-@Component({})
+@Component
 export default class Settings extends Vue {
-  header = "Awesome Site"
-  footer = "Incredible Copyright"
+	header = "Awesome Site";
+	footer = "Incredible Copyright";
 }
 </script>

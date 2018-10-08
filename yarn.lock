@@ -5767,8 +5767,8 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
 typescript@^3.2.0-dev.20181004:
-  version "3.2.0-dev.20181004"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.2.0-dev.20181004.tgz#ac75518858a134a7a3345b23c67ce5c6333279f6"
+  version "3.2.0-dev.20181006"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.2.0-dev.20181006.tgz#87386f1f19250afaceb65eea26e5cfa223f9ad8e"
 
 uglify-js@3.4.x:
   version "3.4.9"
@@ -6018,6 +6018,10 @@ vue-property-decorator@^7:
   resolved "https://registry.yarnpkg.com/vue-property-decorator/-/vue-property-decorator-7.2.0.tgz#8e6b0f4dcc630c357135f76366ba7bd91f1db015"
   dependencies:
     vue-class-component "^6.2.0"
+
+vue-router@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.0.1.tgz#d9b05ad9c7420ba0f626d6500d693e60092cc1e9"
 
 vue-style-loader@^3.0.0:
   version "3.1.2"

@@ -1,6 +1,7 @@
-import Vue from 'vue'
-import {Component, Prop} from 'vue-property-decorator'
+import Vue, { VueConstructor, VNode, CreateElement } from 'vue'
+import {Prop, Component} from 'vue-property-decorator'
 import {VueComponent} from '../../vue-ts-component'
+import RouterLink from './RouterLink';
 
 interface AProps {
   href: string
@@ -10,7 +11,7 @@ interface AProps {
 }
 
 @Component
-export class A extends VueComponent<AProps> {
+export default class A extends VueComponent<AProps> {
   @Prop()
   href: string
   @Prop()
@@ -19,46 +20,16 @@ export class A extends VueComponent<AProps> {
   className: string
   @Prop({required: true, type: Boolean})
   targetBlank: boolean
-
-  render() {
-    if (this.targetBlank) {
-      return (
-        <a
-          href={this.href}
-          target='_blank'
-          title={this.title}
-          class={this.className}
-          rel="noopener noreferrer">{this.$slots.default}</a>
-      )
-    } else if (this.href.startsWith("http://") ||
-      this.href.startsWith("https://") ||
-      this.href.startsWith("www.")) {
-      return (
-        <a
-          href={this.href}
-          title={this.title}
-          class={this.className}
-          rel="noopener noreferrer">{this.$slots.default}</a>
-      )
-    } else {
-      return <router-link
-        to={this.href}
-        title={this.title}
-        class={this.className}>{this.$slots.default}</router-link>
-    }
-  }
-}
-
-interface BlockProps {
-
-}
-@Component
-export class Block extends VueComponent<BlockProps> {
+  
   render() {
     return (
-      <pre><code>
-        {this.$slots.default}
-      </code></pre>
-    )
+		<RouterLink
+			to={this.href}
+			title={this.title}
+			class={this.className}
+		>
+			{this.$slots.default}
+		</RouterLink>
+	)
   }
 }

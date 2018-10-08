@@ -1,6 +1,7 @@
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
-import {A} from './A'
+import A from './A';
+import B from './B';
 
 interface Link {
 	title: string
@@ -17,7 +18,6 @@ interface AProps {
 
 @Component
 export class Content extends Vue {
-	functional = true;
 
 	$props: AProps;
 
@@ -30,8 +30,8 @@ export class Content extends Vue {
 
 	render() {
 		return (
-			<div class="align-baseline flex-grow p-4"><a></a>
-				{this.links.map((link: Link) => {
+			<div class="align-baseline flex-grow p-4">
+				{this.links.map((link) => {
 					return (
 						<li class="popover-item">
 							<A 	
@@ -40,6 +40,8 @@ export class Content extends Vue {
 								title={link.title}
 								targetBlank={link.targetBlank}>{link.value}
 							</A>
+							<B href="abc">	
+							</B>
 						</li>
 					)
 				})}
